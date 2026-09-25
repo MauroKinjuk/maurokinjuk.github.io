@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Mauro Kinjuk — Software Developer en Mercado Libre. Backend, Android, Data.">
+  <title>Mauro Kinjuk | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230ea5e9'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ======= HEADER / MENU ======= -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="nav__logo">&lt;MauroKinjuk /&gt;</a>
+
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#conocimientos" class="nav__link">Conocimientos</a></li>
+        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+        <li><a href="#redes" class="nav__link">Redes</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======= HERO / PRESENTACION ======= -->
+    <section class="hero section" id="inicio">
+      <div class="container hero__container">
+        <div class="hero__data">
+          <span class="hero__greeting">Hola, soy</span>
+          <h1 class="hero__name">Mauro Kinjuk</h1>
+          <h2 class="hero__role">Software Engineer</h2>
+          <p class="hero__description">
+            Trabajo en Mercado Libre y estudio la Tecnicatura
+            Universitaria en Programación en la UTN. Me gusta transformar
+            ideas en soluciones concretas.
+          </p>
+          <div class="hero__buttons">
+            <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn--outline">Contactame</a>
+          </div>
+        </div>
+        <div class="hero__img">
+          <img src="assets/profile.jpg" alt="Foto de Mauro Kinjuk" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= SOBRE MI / INFORMACION GENERAL ======= -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <h2 class="section__title">Sobre mí</h2>
+        <div class="about">
+          <div class="about__text">
+            <p>
+              Soy Software Engineer en <strong>Mercado Libre</strong>, donde desarrollo y
+              mantengo aplicaciones backend con arquitectura de microservicios.
+              Llevo varios años en la compañía: empecé en operaciones logísticas,
+              pasé por mejora de procesos y calidad, y hoy trabajo en el área
+              de ingeniería.
+            </p>
+            <p>
+              Actualmente curso la <strong>Tecnicatura Universitaria en Programación
+              (UTN)</strong>. También completé el programa <strong>Data Champion</strong>
+              de Mercado Libre, con formación en Data Engineering, Data Analytics
+              y Data Science sobre Google Cloud.
+            </p>
+            <p>
+              En mis tiempos libres construyo proyectos propios: apps Android,
+              herramientas de datos para ciclismo y, sobre todo,
+              <strong>automatizaciones</strong> — si algo lo tengo que hacer dos
+              veces, prefiero automatizarlo.
+            </p>
+            <p>
+              Fuera del teclado, hago <strong>ciclismo de MTB</strong> y compito
+              en carreras.
+            </p>
+          </div>
+          <ul class="about__facts">
+            <li>
+              <span class="fact__label">Ubicación</span>
+              <span class="fact__value">Buenos Aires, Argentina</span>
+            </li>
+            <li>
+              <span class="fact__label">Trabajo actual</span>
+              <span class="fact__value">Software Engineer Ssr @ Mercado Libre</span>
+            </li>
+            <li>
+              <span class="fact__label">Estudios</span>
+              <span class="fact__value">Tec. Universitaria en Programación — UTN</span>
+            </li>
+            <li>
+              <span class="fact__label">Hobby</span>
+              <span class="fact__value">Ciclismo MTB — compito en carreras</span>
+            </li>
+            <li>
+              <span class="fact__label">Email</span>
+              <a class="fact__value fact__link" href="mailto:mauro.kinjuk@gmail.com">mauro.kinjuk@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONOCIMIENTOS ======= -->
+    <section class="section section--alt" id="conocimientos">
+      <div class="container">
+        <h2 class="section__title">Conocimientos</h2>
+        <div class="skills">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Backend</h3>
+            <ul class="skill-group__list">
+              <li class="skill">Go</li>
+              <li class="skill">Kotlin</li>
+              <li class="skill">Python</li>
+              <li class="skill">SQL</li>
+              <li class="skill">Microservicios</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Mobile</h3>
+            <ul class="skill-group__list">
+              <li class="skill">Android</li>
+              <li class="skill">Jetpack Compose</li>
+              <li class="skill">Room</li>
+              <li class="skill">Firebase</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Data &amp; Herramientas</h3>
+            <ul class="skill-group__list">
+              <li class="skill">Git</li>
+              <li class="skill">BigQuery</li>
+              <li class="skill">Google Cloud</li>
+              <li class="skill">Looker</li>
+              <li class="skill">Automatización</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= PROYECTOS ======= -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2 class="section__title">Proyectos</h2>
+        <div class="projects">
+
+          <article class="project-card">
+            <div class="project-card__header project-card__header--finarg">
+              <span class="project-card__tag">Android</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">MiGasto</h3>
+              <p class="project-card__description">
+                App Android de gestión de gastos personales, publicada en
+                Google Play: tarjetas de crédito con ciclos de facturación,
+                compras en cuotas, presupuestos y soporte multi-idioma.
+              </p>
+              <ul class="project-card__tech">
+                <li>Kotlin</li>
+                <li>Jetpack Compose</li>
+                <li>Room</li>
+                <li>Firebase</li>
+                <li>MVVM + Hilt</li>
+              </ul>
+              <a class="project-card__link" href="https://play.google.com/store/apps/details?id=com.tordy.migasto&hl=es_DO" target="_blank" rel="noopener">
+                Ver en Play Store
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header project-card__header--gopro">
+              <span class="project-card__tag">Python</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">gopro-dashboard-overlay</h3>
+              <p class="project-card__description">
+                Fork de una herramienta open source que genera overlays de
+                telemetría (velocidad, mapas, potencia) sobre videos GoPro
+                o archivos GPX/FIT. Mantengo mi propia versión con zonas de
+                potencia, un perfil para CapCut y animación de mapas.
+              </p>
+              <ul class="project-card__tech">
+                <li>Python</li>
+                <li>FFmpeg</li>
+                <li>GPX / FIT</li>
+                <li>Docker</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/MauroKinjuk/gopro-dashboard-overlay" target="_blank" rel="noopener">
+                Ver en GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header project-card__header--onepass">
+              <span class="project-card__tag">Python</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">1Password CLI Export</h3>
+              <p class="project-card__description">
+                Herramienta que exporta un vault completo de 1Password usando
+                el CLI oficial y genera un archivo compatible con Bitwarden
+                (CSV o JSON) — útil para migrar contraseñas o hacer backups
+                estructurados.
+              </p>
+              <ul class="project-card__tech">
+                <li>Python</li>
+                <li>1Password CLI</li>
+                <li>Bitwarden</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/MauroKinjuk/1Password-CLI-Export" target="_blank" rel="noopener">
+                Ver en GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <p class="projects__more">
+          <a href="https://github.com/MauroKinjuk?tab=repositories" target="_blank" rel="noopener">
+            Ver todos mis repositorios en GitHub →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= REDES ======= -->
+    <section class="section section--alt" id="redes">
+      <div class="container">
+        <h2 class="section__title">Redes</h2>
+        <div class="social">
+          <a class="social-card" href="https://github.com/MauroKinjuk" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="social-card__name">GitHub</span>
+            <span class="social-card__user">@MauroKinjuk</span>
+          </a>
+          <a class="social-card" href="https://www.linkedin.com/in/mauro-kinjuk/" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            <span class="social-card__name">LinkedIn</span>
+            <span class="social-card__user">/in/mauro-kinjuk</span>
+          </a>
+          <a class="social-card" href="mailto:mauro.kinjuk@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="social-card__name">Email</span>
+            <span class="social-card__user">mauro.kinjuk@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACTO ======= -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <p class="contact__intro">¿Querés charlar sobre un proyecto o una oportunidad? Escribime.</p>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              <span class="form-error" id="error-nombre"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+              <span class="form-error" id="error-email"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame en qué puedo ayudarte..." required></textarea>
+            <span class="form-error" id="error-mensaje"></span>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>© <span id="year"></span> Mauro Kinjuk — Hecho con HTML, CSS y JavaScript.</p>
+      <a href="#inicio" class="footer__top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
