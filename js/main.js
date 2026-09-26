@@ -46,15 +46,19 @@ window.addEventListener('scroll', () => {
   scrollIndicator.classList.toggle('hidden', window.scrollY > 80);
 });
 
-// ======= SCROLL SPY (seccion activa en el menu) =======
+// ======= SCROLL SPY (seccion activa en el menu y nav lateral) =======
 const sections = document.querySelectorAll('main .section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
+const sideDots = document.querySelectorAll('.side-nav__dot');
 
 const scrollSpy = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     navLinks.forEach(link => {
       link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+    });
+    sideDots.forEach(dot => {
+      dot.classList.toggle('active', dot.getAttribute('href') === `#${entry.target.id}`);
     });
   });
 }, { rootMargin: '-40% 0px -55% 0px' });
