@@ -196,6 +196,38 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
+  position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  animation: bounce 2s ease-in-out infinite;
+  transition: opacity 0.4s ease, color var(--transition);
+}
+
+.scroll-indicator:hover { color: var(--accent); }
+
+.scroll-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator { animation: none; }
 }
 
 .hero__container {

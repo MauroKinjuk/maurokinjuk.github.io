@@ -39,9 +39,11 @@ document.querySelectorAll('a[href="#contacto"]').forEach(link => {
 
 // ======= HEADER CON SOMBRA AL SCROLL =======
 const header = document.getElementById('header');
+const scrollIndicator = document.getElementById('scroll-indicator');
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 10);
+  scrollIndicator.classList.toggle('hidden', window.scrollY > 80);
 });
 
 // ======= SCROLL SPY (seccion activa en el menu) =======
