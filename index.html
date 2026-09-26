@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Mauro Kinjuk — Software Developer en Mercado Libre. Backend, Android, Data.">
-  <title>Mauro Kinjuk | Portfolio</title>
+  <title>Mauro Kinjuk | Portfolio — Software Engineer</title>
+  <meta name="description" content="Portfolio de Mauro Kinjuk, Software Engineer en Mercado Libre. Proyectos, conocimientos y contacto.">
+  <meta name="keywords" content="Mauro Kinjuk, portfolio, software engineer, desarrollador, backend, Kotlin, Go, Python, Mercado Libre, UTN">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mauro Kinjuk">
+
+  <!-- Open Graph: preview al compartir el link -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mauro Kinjuk | Portfolio — Software Engineer">
+  <meta property="og:description" content="Software Engineer en Mercado Libre. Proyectos, conocimientos y contacto.">
+  <meta property="og:url" content="https://maurokinjuk.github.io/">
+  <meta property="og:image" content="https://maurokinjuk.github.io/assets/profile.jpg">
+  <meta property="og:locale" content="es_AR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -71,7 +82,7 @@
           </p>
           <div class="hero__buttons">
             <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-            <a href="#contacto" class="btn btn--outline">Contactame</a>
+            <a href="cv/mauro-kinjuk-cv.pdf" class="btn btn--outline" download>Descargar CV</a>
           </div>
         </div>
         <div class="hero__img">
@@ -136,6 +147,29 @@
             </li>
           </ul>
         </div>
+
+        <h3 class="timeline__title">Experiencia — Mercado Libre</h3>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__date">abr 2026 — hoy</span>
+            <p class="timeline__desc"><strong>Software Engineer Ssr</strong> — Backend con arquitectura de microservicios.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">ene 2025 — abr 2026</span>
+            <span class="timeline__duration">1 año 3 meses</span>
+            <p class="timeline__desc"><strong>Software Developer Jr</strong></p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">dic 2023 — ene 2025</span>
+            <span class="timeline__duration">1 año 1 mes</span>
+            <p class="timeline__desc"><strong>Software Developer Trainee</strong></p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">2019 — 2023</span>
+            <span class="timeline__duration">4 años</span>
+            <p class="timeline__desc"><strong>Operaciones logísticas → Mejora de procesos / ICQA</strong></p>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -189,6 +223,7 @@
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">MiGasto</h3>
+              <p class="project-card__role">Rol: desarrollo completo</p>
               <p class="project-card__description">
                 App Android de gestión de gastos personales, publicada en
                 Google Play: tarjetas de crédito con ciclos de facturación,
@@ -214,6 +249,7 @@
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">gopro-dashboard-overlay</h3>
+              <p class="project-card__role">Rol: contribuidor — mantengo mi fork</p>
               <p class="project-card__description">
                 Fork de una herramienta open source que genera overlays de
                 telemetría (velocidad, mapas, potencia) sobre videos GoPro
@@ -239,6 +275,7 @@
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">1Password CLI Export</h3>
+              <p class="project-card__role">Rol: autor</p>
               <p class="project-card__description">
                 Herramienta que exporta un vault completo de 1Password usando
                 el CLI oficial y genera un archivo compatible con Bitwarden
@@ -295,7 +332,7 @@
       <div class="container">
         <h2 class="section__title">Contacto</h2>
         <p class="contact__intro">¿Querés charlar sobre un proyecto o una oportunidad? Escribime.</p>
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/maendkwl" method="POST" novalidate>
           <div class="form-row">
             <div class="form-field">
               <label for="nombre">Nombre</label>
@@ -307,6 +344,11 @@
               <input type="email" id="email" name="email" placeholder="tu@email.com" required>
               <span class="form-error" id="error-email"></span>
             </div>
+          </div>
+          <div class="form-field">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+            <span class="form-error" id="error-asunto"></span>
           </div>
           <div class="form-field">
             <label for="mensaje">Mensaje</label>

@@ -72,6 +72,7 @@ const status = document.getElementById('form-status');
 const validators = {
   nombre: value => value.trim().length >= 2 || 'Ingresá tu nombre.',
   email: value => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim()) || 'Ingresá un email válido.',
+  asunto: value => value.trim().length >= 3 || 'Ingresá un asunto.',
   mensaje: value => value.trim().length >= 10 || 'El mensaje debe tener al menos 10 caracteres.',
 };
 
@@ -88,7 +89,7 @@ form.querySelectorAll('input, textarea').forEach(field => {
   field.addEventListener('input', () => validateField(field));
 });
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', async event => {
   event.preventDefault();
   const fields = [...form.querySelectorAll('input, textarea')];
   const allValid = fields.map(validateField).every(Boolean);
@@ -98,16 +99,31 @@ form.addEventListener('submit', event => {
     return;
   }
 
-  const nombre = form.nombre.value.trim();
-  const email = form.email.value.trim();
-  const mensaje = form.mensaje.value.trim();
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  status.textContent = 'Enviando...';
 
-  const subject = encodeURIComponent(`Contacto desde tu portfolio — ${nombre}`);
-  const body = encodeURIComponent(`${mensaje}\n\n— ${nombre} (${email})`);
+  const data = new FormData(form);
+  data.set('_subject', `${data.get('asunto')} — ${data.get('nombre')}`);
 
-  window.location.href = `mailto:mauro.kinjuk@gmail.com?subject=${subject}&body=${body}`;
-  status.textContent = 'Abriendo tu cliente de correo...';
-  form.reset();
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+
+    if (response.ok) {
+      status.textContent = 'Mensaje enviado — gracias, te respondo a la brevedad.';
+      form.reset();
+    } else {
+      status.textContent = 'No se pudo enviar. Escribime directo a mauro.kinjuk@gmail.com';
+    }
+  } catch {
+    status.textContent = 'Sin conexión — escribime directo a mauro.kinjuk@gmail.com';
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
 
 // ======= AÑO EN FOOTER =======

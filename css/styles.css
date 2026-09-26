@@ -244,21 +244,23 @@ ul { list-style: none; }
 
 .side-nav__dot {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 2px solid var(--text-muted);
+  border: 1.5px solid var(--text-muted);
   background: transparent;
+  opacity: 0.55;
   transition: all var(--transition);
 }
 
-.side-nav__dot:hover { border-color: var(--accent); }
+.side-nav__dot:hover { border-color: var(--accent); opacity: 1; }
 
 .side-nav__dot.active {
   background: var(--accent);
   border-color: var(--accent);
-  transform: scale(1.35);
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.6);
+  opacity: 1;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.6);
 }
 
 .side-nav__label {
@@ -375,6 +377,73 @@ ul { list-style: none; }
 .fact__value { color: var(--text); font-size: 0.95rem; }
 .fact__link:hover { text-decoration: underline; }
 
+/* ======= TIMELINE (sobre mi) ======= */
+.timeline__title {
+  font-size: 1.1rem;
+  margin: 3rem 0 1.5rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.75rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.timeline__date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.timeline__duration {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 0.6rem;
+}
+
+.timeline__desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.timeline__desc strong { color: var(--text); }
+
 /* ======= CONOCIMIENTOS ======= */
 .skills {
   display: grid;
@@ -481,6 +550,13 @@ ul { list-style: none; }
 }
 
 .project-card__title { font-size: 1.25rem; }
+
+.project-card__role {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-top: -0.5rem;
+}
 
 .project-card__description {
   color: var(--text-muted);
