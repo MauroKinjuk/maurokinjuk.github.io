@@ -117,10 +117,10 @@ form.addEventListener('submit', async event => {
       status.textContent = 'Mensaje enviado — gracias, te respondo a la brevedad.';
       form.reset();
     } else {
-      status.textContent = 'No se pudo enviar. Escribime directo a mauro.kinjuk@gmail.com';
+      status.textContent = 'No se pudo enviar. Escribime directo a contacto@mauro.is-a.dev';
     }
   } catch {
-    status.textContent = 'Sin conexión — escribime directo a mauro.kinjuk@gmail.com';
+    status.textContent = 'Sin conexión — escribime directo a contacto@mauro.is-a.dev';
   } finally {
     submitBtn.disabled = false;
   }
