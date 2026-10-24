@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad — MiGasto</title>
+<meta name="description" content="Política de privacidad de MiGasto, app de finanzas personales para Android.">
+<style>
+  :root { --bg:#0f141b; --card:#161d27; --text:#e6edf5; --muted:#9db0c3; --accent:#4f9cf9; --line:#26303d; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Inter,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  header { margin-bottom:36px; }
+  h1 { font-size:1.9rem; margin-bottom:6px; }
+  .updated { color:var(--muted); font-size:.9rem; }
+  h2 { font-size:1.15rem; margin:32px 0 10px; color:var(--accent); }
+  p { color:var(--text); margin-bottom:10px; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f6f8fb; --card:#fff; --text:#1c2530; --muted:#5b6b7d; --accent:#1a73e8; --line:#dde3ea; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Política de privacidad — MiGasto</h1>
+  <p class="updated">Última actualización: 7 de julio de 2026</p>
+</header>
+
+<h2>1. Responsable del tratamiento</h2>
+<p>El responsable del tratamiento es el desarrollador de MiGasto. Los datos financieros se procesan principalmente en tu dispositivo. Para autenticación, gestión de suscripción, analíticas anónimas y reporte de errores utilizamos servicios de terceros detallados más adelante.</p>
+
+<h2>2. Información que recopilamos</h2>
+<p>Datos financieros (transacciones, cuentas, tarjetas, pagos recurrentes, préstamos, inversiones, presupuestos y preferencias): se almacenan localmente en tu dispositivo y no se envían a la nube. Credenciales de cuenta: al iniciar sesión, Firebase Authentication gestiona tu correo electrónico y contraseña para permitir el acceso. Estado de Premium: el estado de tu suscripción (Premium activo y fecha de vencimiento) se guarda en Firebase Firestore, identificado por tu ID de usuario anónimo (uid), no por tu correo electrónico. Eventos de uso anónimos: enviamos eventos estadísticos anónimos mediante Firebase Analytics para mejorar el servicio. Reportes de errores: Firebase Crashlytics recopila información técnica sobre fallos (sin datos financieros ni personales sensibles).</p>
+
+<h2>3. Almacenamiento local y en la nube</h2>
+<p>Tus datos financieros se guardan localmente en tu dispositivo (base de datos Room y DataStore) y no se sincronizan con la nube. Firebase Authentication gestiona tus credenciales (correo electrónico y contraseña) para permitir el acceso. Firebase Firestore almacena únicamente el estado de tu suscripción Premium y metadatos técnicos (versión de la app), identificados por tu ID de usuario anónimo (uid). No guardamos tu correo electrónico en Firestore. No vendemos ni compartimos tus datos con terceros con fines comerciales.</p>
+
+<h2>4. Servicios de terceros</h2>
+<p>La app utiliza los siguientes servicios de terceros, cada uno con su propia política de privacidad: Firebase Authentication (autenticación con correo electrónico y contraseña; gestiona las credenciales, no las almacenamos nosotros), Firebase Firestore (almacenamiento del estado de Premium identificado por uid), Firebase Analytics (eventos de uso anónimos), Firebase Crashlytics (reporte de errores técnicos), Google Play Billing (gestión de compras de Premium) y Google AdMob (publicidad en la versión gratuita). Google gestiona los datos de tu método de pago; no accedemos a ellos.</p>
+
+<h2>5. Publicidad y personalización</h2>
+<p>La versión gratuita muestra anuncios a través de Google AdMob. AdMob puede recopilar identificadores de dispositivo y datos de uso para mostrar anuncios relevantes. Podés desactivar la personalización de anuncios desde la configuración de publicidad de Google en tu dispositivo. Suscribirte a Premium elimina todos los anuncios de la app.</p>
+
+<h2>6. Permisos de la app</h2>
+<p>La app solicita los siguientes permisos: acceso a Internet (para autenticación, analíticas y publicidad), notificaciones (para recordatorios de pagos recurrentes y tarjetas de crédito) y biometría (opcional, para el bloqueo de la app; los datos biométricos nunca salen de tu dispositivo y son gestionados por el sistema Android). No accedemos a contactos, ubicación, cámara ni micrófono.</p>
+
+<h2>7. Finalidades y bases legales</h2>
+<p>Procesamos datos locales para prestarte el servicio (ejecución del contrato). Los datos de cuenta se procesan para autenticación y gestión de la suscripción (ejecución del contrato e interés legítimo). Para analíticas anónimas y publicidad, la base legal es tu consentimiento o interés legítimo, según aplique. Podés desactivar las analíticas desde la sección de Modo programador y retirar el consentimiento para personalización de anuncios desde la configuración de Google.</p>
+
+<h2>8. Destinatarios y transferencias</h2>
+<p>No vendemos tus datos personales. Compartimos únicamente lo necesario con los proveedores mencionados en la sección de servicios de terceros: Firebase (autenticación, base de datos, analíticas y reporte de errores), Google Play Billing (compras) y Google AdMob (publicidad). Estos proveedores pueden realizar transferencias internacionales de datos conforme a sus propias garantías y cláusulas contractuales tipo. Consultá la <a href="https://firebase.google.com/support/privacy">política de privacidad de Firebase</a> y de Google para más detalles.</p>
+
+<h2>9. Seguridad</h2>
+<p>Aplicamos medidas razonables para proteger la información. Los datos financieros se almacenan localmente en tu dispositivo; te recomendamos proteger el acceso con bloqueo de app (PIN o biometría) y realizar copias de seguridad mediante la función de exportación. Las credenciales y el estado de Premium en Firebase se protegen mediante las medidas de seguridad de Google Firebase.</p>
+
+<h2>10. Plazos de conservación</h2>
+<p>Los datos financieros locales se conservan mientras mantengas la app instalada o hasta que los elimines. Las credenciales en Firebase Authentication y el estado de Premium en Firestore se conservan mientras tu cuenta esté activa; podés solicitar su eliminación cerrando sesión o contactándonos. Los datos de analíticas se conservan según la política de retención de Firebase Analytics.</p>
+
+<h2>11. Tus derechos</h2>
+<p>En Argentina (Ley 25.326) y, cuando corresponda, bajo el RGPD, tenés derecho a acceso, rectificación, actualización, supresión, oposición y portabilidad de tus datos personales. Para los datos financieros locales, podés gestionarlos directamente desde la app o desinstalándola. Para las credenciales y el estado de Premium en Firebase, podés cerrar sesión desde Configuración o contactarnos para solicitar la eliminación. Para analíticas, podés retirar tu consentimiento desactivándolas desde la sección de Modo programador.</p>
+
+<h2>12. Menores de edad</h2>
+<p>La app no está dirigida a menores de 13 años. No recopilamos conscientemente información de menores. Si creés que un menor nos proporcionó datos, contactanos para eliminarlos.</p>
+
+<h2>13. Cambios en esta política</h2>
+<p>Podemos actualizar esta política. Te avisaremos de cambios relevantes a través de la app. El uso continuado implica aceptación de la versión vigente.</p>
+
+<h2>14. Contacto</h2>
+<p>Para consultas o solicitudes sobre privacidad escribinos a <a href="mailto:soporte.migasto@gmail.com">soporte.migasto@gmail.com</a>, o usá el formulario de contacto en la configuración de la app.</p>
+
+<footer>
+  <p>MiGasto — app de finanzas personales para Android · <a href="https://play.google.com/store/apps/details?id=com.tordy.migasto">Google Play</a></p>
+</footer>
+</div>
+</body>
+</html>
